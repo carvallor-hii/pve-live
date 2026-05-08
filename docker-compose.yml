@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  # -------------------------
+  # Clean container (lb clean)
+  # -------------------------
+  pve-live-clean:
+    build: .
+    container_name: pve-live-clean
+    privileged: true
+    working_dir: /workspace/pve-live
+    volumes:
+      - ./:/workspace/pve-live
+    command: ["bash", "-c", "lb clean --purge"]
+
+  # -------------------------
+  # Build container (lb config && lb build)
+  # -------------------------
+  pve-live-build:
+    build: .
+    container_name: pve-live-build
+    privileged: true
+    working_dir: /workspace/pve-live
+    volumes:
+      - ./:/workspace/pve-live
+    command: ["bash", "-c", "lb config && lb build"]
+    tty: true
+    stdin_open: true
