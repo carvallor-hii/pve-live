@@ -25,7 +25,8 @@ apt-get install $APT_OPTS \
     ca-certificates \
     gnupg \
     wget \
-    curl
+    curl \
+    nvme-cli
 
 # Install minimal LXDE desktop environment
 apt-get install $APT_OPTS \
