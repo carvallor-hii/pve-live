@@ -48,9 +48,4 @@ apt-get install $APT_OPTS \
     iputils-ping \
     ethtool \
     traceroute \
-    dnsutils \
-    dnsmasq \
-    isc-dhcp-client \
-    wpasupplicant \
-    iw \
-    wireguard-tools
+    dnsutils 
