@@ -4,7 +4,7 @@ services:
   # -------------------------
   # Clean container (lb clean)
   # -------------------------
-  lb-clean:
+  pve-live-clean:
     build: .
     container_name: pve-live-clean
     privileged: true
@@ -16,7 +16,7 @@ services:
   # -------------------------
   # Build container (lb config && lb build)
   # -------------------------
-  lb-build:
+  pve-live-build:
     build: .
     container_name: pve-live-build
     privileged: true
