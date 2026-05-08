@@ -10,7 +10,7 @@ services:
     privileged: true
     working_dir: /workspace/pve-live
     volumes:
-      - ./pve-live:/workspace/pve-live
+      - ./:/workspace/pve-live
     command: ["bash", "-c", "lb clean --purge"]
 
   # -------------------------
@@ -22,7 +22,7 @@ services:
     privileged: true
     working_dir: /workspace/pve-live
     volumes:
-      - ./pve-live:/workspace/pve-live
+      - ./:/workspace/pve-live
     command: ["bash", "-c", "lb config && lb build"]
     tty: true
     stdin_open: true
