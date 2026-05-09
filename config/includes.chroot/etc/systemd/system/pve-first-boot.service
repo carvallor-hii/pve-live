@@ -1,0 +1,12 @@
+[Unit]
+Description=PVE Node First Boot Setup
+ConditionPathExists=!/etc/pve-node-initialized
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/pve-first-boot.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

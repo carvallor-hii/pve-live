@@ -26,7 +26,10 @@ apt-get install $APT_OPTS \
     gnupg \
     wget \
     curl \
-    nvme-cli
+    nvme-cli \
+    open-iscsi \
+    cloud-init \
+    ansible
 
 # Install minimal LXDE desktop environment
 apt-get install $APT_OPTS \

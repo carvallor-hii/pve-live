@@ -1,0 +1,13 @@
+#!ipxe
+set base-url http://your-pxe-server/pve-live
+
+kernel ${base-url}/vmlinuz \
+  boot=live \
+  netboot=nfs \
+  persistence \
+  persistence-label=pve-${mac:hexhyp} \
+  console=tty0 \
+  quiet
+
+initrd ${base-url}/initrd.img
+boot
